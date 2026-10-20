@@ -1,0 +1,31 @@
+[project]
+name = "deep-researcher-free"
+version = "0.2.0"
+description = "Multi-stage deep research agent (Searcher, Analyst, Writer) on Agno, running on free tools: Groq + DuckDuckGo"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Arindam Majumder" },
+]
+dependencies = [
+    "agno==1.7.5",
+    "groq",
+    "duckduckgo-search",
+    "newspaper4k",
+    "lxml_html_clean",
+    "python-dotenv",
+    "mcp",
+    "streamlit",
+    "pydantic",
+]
+
+[project.optional-dependencies]
+mistral = ["mistralai<2"]
+dev = ["playwright"]
+
+[project.urls]
+Upstream = "https://github.com/Arindam200/awesome-ai-apps"
+
+[tool.uv]
+package = false
